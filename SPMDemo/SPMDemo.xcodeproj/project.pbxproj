@@ -13,6 +13,9 @@
 		AE4932E42C226C3500ECA423 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE4932E32C226C3500ECA423 /* Base */; };
 		AE4932E62C226C3600ECA423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4932E52C226C3600ECA423 /* Assets.xcassets */; };
 		AE4932E92C226C3600ECA423 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE4932E82C226C3600ECA423 /* Base */; };
+		AE4932F92C226D8500ECA423 /* PromotedFirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AE4932F82C226D8500ECA423 /* PromotedFirebaseAnalytics */; };
+		AE4932FB2C226D8500ECA423 /* PromotedFirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = AE4932FA2C226D8500ECA423 /* PromotedFirebaseRemoteConfig */; };
+		AE4932FD2C226D8500ECA423 /* PromotedMetrics in Frameworks */ = {isa = PBXBuildFile; productRef = AE4932FC2C226D8500ECA423 /* PromotedMetrics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4932FD2C226D8500ECA423 /* PromotedMetrics in Frameworks */,
+				AE4932F92C226D8500ECA423 /* PromotedFirebaseAnalytics in Frameworks */,
+				AE4932FB2C226D8500ECA423 /* PromotedFirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = SPMDemo;
+			packageProductDependencies = (
+				AE4932F82C226D8500ECA423 /* PromotedFirebaseAnalytics */,
+				AE4932FA2C226D8500ECA423 /* PromotedFirebaseRemoteConfig */,
+				AE4932FC2C226D8500ECA423 /* PromotedMetrics */,
+			);
 			productName = SPMDemo;
 			productReference = AE4932D92C226C3500ECA423 /* SPMDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = AE4932D02C226C3500ECA423;
+			packageReferences = (
+				AE4932F72C226D8500ECA423 /* XCRemoteSwiftPackageReference "ios-metrics-sdk" */,
+			);
 			productRefGroup = AE4932DA2C226C3500ECA423 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +375,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE4932F72C226D8500ECA423 /* XCRemoteSwiftPackageReference "ios-metrics-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yunapotamus/ios-metrics-sdk";
+			requirement = {
+				branch = yuna/update;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE4932F82C226D8500ECA423 /* PromotedFirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE4932F72C226D8500ECA423 /* XCRemoteSwiftPackageReference "ios-metrics-sdk" */;
+			productName = PromotedFirebaseAnalytics;
+		};
+		AE4932FA2C226D8500ECA423 /* PromotedFirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE4932F72C226D8500ECA423 /* XCRemoteSwiftPackageReference "ios-metrics-sdk" */;
+			productName = PromotedFirebaseRemoteConfig;
+		};
+		AE4932FC2C226D8500ECA423 /* PromotedMetrics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE4932F72C226D8500ECA423 /* XCRemoteSwiftPackageReference "ios-metrics-sdk" */;
+			productName = PromotedMetrics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE4932D12C226C3500ECA423 /* Project object */;
 }
